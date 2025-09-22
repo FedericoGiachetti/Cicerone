@@ -1,0 +1,11 @@
+requests
+python-dotenv
+
+# LLM / LangChain
+langchain
+openai
+
+# Google Calendar
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
