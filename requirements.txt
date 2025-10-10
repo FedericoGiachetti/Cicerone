@@ -1,11 +1,24 @@
+# Core utilities
 requests
 python-dotenv
 
-# LLM / LangChain
+# LangChain + OpenAI
 langchain
+langchain-core
+langchain-community
 openai
 
 # Google Calendar
 google-api-python-client
 google-auth-oauthlib
 google-auth-httplib2
+
+# Streamlit UI
+streamlit
+
+# JSON / Data handling (could be implicitly needed by LangChain or utils)
+pandas
+
+# Optional but recommended (stability and UX)
+tqdm            # for progress bars (LangChain sometimes uses)
+tenacity        # retry logic used internally by LangChain
