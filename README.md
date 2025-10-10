@@ -6,6 +6,16 @@
 > Built as a proof of concept to explore how AI can make local recommendations more personal and conversational.
 
 ---
+
+## 📌 Project Status
+
+This is a working **MVP / proof of concept**:  
+- Core loop functional (chat with weather, events, calendar).  
+- Tone and accuracy still experimental.  
+- Demonstrates concept and future potential, not a finished product.
+
+---
+
 ## 🚀 Features
 
 Cicerone suggests **context-aware recommendations** of activities and events in Milan by combining:
@@ -44,6 +54,18 @@ Compared to event discovery platforms that exist today:
   - Current: OpenAI `gpt-3.5-turbo`.  
   - Initially tested with LLaMA 3 8B Instruct, but it produced frequent grammar mistakes in Italian, which made it unsuitable for a project focused on conversational quality and tone.
 
+- **Additional features implemented:**  
+  - Lightweight memory for storing user name, age, and preferences.  
+  - CO-STAR prompting structure for clearer contextual reasoning.  
+  - Few-shot prompting (general, specific, and “no events” edge cases) to guide tone and behavior.  
+
+---
+
+## ⚠️ Disclaimer
+The code uses the correct Eventbrite endpoint (`/v3/events/search/`), but standard API keys do not include access to the **Public Events API** scope.  
+As a result, API requests may return a `404` response or an empty `"events": []` payload.  
+
+Since this is an MVP, this behavior is deliberately accepted, as the aim is just to demonstrate the integration structure and product idea.
 
 ---
 
@@ -60,7 +82,6 @@ Compared to event discovery platforms that exist today:
    from the project root:
    ```bash
    pip install -r requirements.txt
-
 
 ---
 
@@ -89,7 +110,7 @@ Compared to event discovery platforms that exist today:
 
 ---
 
-## Draft and Business Ideas 
+## Draft and Product/Business Ideas 
 The project leaves room for several potential business opportunities if it were to be developed into a full-scale app or service.
 - **Personality options and partnership opportunities**  
   - Allow the user to choose the model’s tone, inspired by well-known Milanese personas.  
@@ -112,17 +133,6 @@ The project leaves room for several potential business opportunities if it were 
   - *Example*:
     - 🇮🇹 *Cicerone: "Ho visto che anche il Luis stava cercando un pub dove andare stasera. Potreste beccarvi insieme"*  
     - 🇬🇧 *Cicerone: "I noticed Luigi was also looking for a pub tonight. Maybe would be nice if you met"*
-
-
----
-
-## 📌 Project Status
-
-This is a working **MVP / proof of concept**:  
-- Core loop functional (chat with weather, events, calendar).  
-- Tone and accuracy still experimental.  
-- Demonstrates concept and future potential, not a finished product.
-
 
 ---
 

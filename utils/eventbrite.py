@@ -7,7 +7,7 @@ def get_events(city="Milano"):
     headers = {"Authorization": f"Bearer {key}"}
     r = requests.get(url, headers=headers).json()
     events = []
-    for e in r.get("events", [])[:3]:
+    for e in r.get("events", []):
         name = e["name"]["text"]
         start = e["start"]["local"]
         events.append(f"{name} alle ore {start}")
