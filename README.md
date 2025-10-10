@@ -12,7 +12,8 @@
 This is a working **MVP / proof of concept**:  
 - Core loop functional (chat with weather, events, calendar).  
 - Tone and accuracy still experimental.  
-- Demonstrates concept and future potential, not a finished product.
+- Basic AI-generated UI, for the sake of presentation.
+- Aims to demonstrate concept and future potential, not a finished product.
 
 ---
 
@@ -82,6 +83,9 @@ Since this is an MVP, this behavior is deliberately accepted, as the aim is just
    from the project root:
    ```bash
    pip install -r requirements.txt
+
+4. **Run the Streamlit app**
+    streamlit run app.py
 
 ---
 
