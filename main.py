@@ -132,6 +132,12 @@ prompt = ChatPromptTemplate.from_messages(
 )
 
 
+# Initialize the language model
+llm = ChatOpenAI(
+    model="gpt-3.5-turbo",
+    temperature=0.8,
+    openai_api_key=os.getenv("OPENAI_API_KEY")
+)
 
 chain = LLMChain(llm=llm, prompt=prompt)
 
@@ -169,11 +175,23 @@ print(f"{name}: {query}\n")
 print(f"Cicerone:\n{output['text']}")
 
 # Chat loop
+# Chat loop
 while True:
     query = input(f"{name}: ").strip()
+
+    # Reset stored user data if requested
+    if query.lower() == "reset":
+        if os.path.exists(USER_FILE):
+            os.remove(USER_FILE)
+            print("✅ Profile reset. Restart the program to enter new info.")
+        else:
+            print("No profile file found.")
+        break
+
     if query.lower() in ["exit", "quit", "esci"]:
         print("Ciao! Alla prossima!")
         break
+
 
     result = chain.invoke({
         "weather": weather,
