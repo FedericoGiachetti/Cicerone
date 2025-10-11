@@ -2,8 +2,8 @@
 
 > **TL;DR**  
 > Cicerone is an MVP of a chat-based local assistant for Milan.  
-> It suggests activities by combining events, weather, and calendar data, and answers in a natural, WhatsApp-like Italian tone.  
-> Built as a proof of concept to explore how AI can make local recommendations more personal and conversational.
+> It suggests activities by combining user and real-time event and weather data, and answers in a natural, WhatsApp-style Italian tone.  
+> Built as a proof of concept to explore how AI can make activity recommendations more personal and conversational.
 
 ---
 
@@ -36,7 +36,7 @@ Compared to event discovery platforms that exist today:
 
 - **Closer to real conversations**  
   Natural, chat-based interaction, like asking a friend who knows both you and the city, and uses a tone with a touch of milanese slang.
-- **AI powered and user-friendlt**:
+- **AI powered and user-friendly**:
   Intelligently combines information from multiple soruces e.g. weather data -> No need for user to manually cross-check weather and events.
 - **Nuanced preferences**  
   Expressed in natural language -> can subtly adapt to your current mood expressed in your own words.
@@ -47,7 +47,7 @@ Compared to event discovery platforms that exist today:
 
 - If Google Calendar is not configured, the assistant still works (it will simply note that calendar integration is inactive).
 - Design choice: **no Chain-of-Thought reasoning**.  
-  Focus is on fast, agile replies instead of long deliberations.  
+  Focus is on fast, agile replies instead of long ones.  
 - Design choice: **Events are retrieved using Eventbrite API instead of scraping**  
   - API: stable, legal, JSON payloads  
   - Scraping: fragile, error-prone, legally risky
@@ -85,7 +85,8 @@ Since this is an MVP, this behavior is deliberately accepted, as the aim is just
    pip install -r requirements.txt
 
 4. **Run the Streamlit app**
-    streamlit run app.py
+   ```bash
+   streamlit run app.py
 
 ---
 
