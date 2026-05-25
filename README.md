@@ -66,7 +66,7 @@ Compared to event discovery platforms that exist today:
 The code uses the correct Eventbrite endpoint (`/v3/events/search/`), but standard API keys do not include access to the **Public Events API** scope.  
 As a result, API requests may return a `404` response or an empty `"events": []` payload.  
 
-Since this is an MVP, this behavior is deliberately accepted, as the aim is just to demonstrate the integration structure and product idea.
+Since this is an MVP, this behavior is deliberately left as is at this stafe of this project, as the aim is just to demonstrate the integration structure and product idea.
 
 ---
 
